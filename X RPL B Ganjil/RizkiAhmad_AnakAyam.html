@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        body{background-color: silver;}
+    </style>
+    <center>
+    <form>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>🐤ANAK AYAM🐤</h1>
+        Jumlah anak ayam :  <br>  <input type="number" id="AayamRizkiA" placeholder="Masukan"> <br>
+        <button onclick="kirim()">KIRIM</button>
+    </form>
+    
+    <script>
+        function kirim() {
+            AayamRizkiA=document.getElementById("AayamRizkiA").value
+            for(BayamRizkiA = AayamRizkiA; BayamRizkiA>1;BayamRizkiA--){
+                document.write("tekotek kotek kotek anak 🐤 turunlah " + BayamRizkiA + "<br>" + "tekotek kotek kotek mati satu tinggalah " + (BayamRizkiA-1)  + "<br>" + "<br>")
+            }
+            document.write("tekotek kotek kotek anak 🐤 turunlah 1 <br> tekotek kotek kotek mati satu sisa induknya")
+        }
+    </script>
+    </center>
+</body>
+</html>

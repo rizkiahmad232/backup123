@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-09 11:08:31 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MTA6MzI6MzkgUE07MjI4OA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MTE6MDg6MzEgUE07MTsyMzky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="factorialRizkiA, nilaiRizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;Hitung factorial &quot;" newline="True"/>
+            <output expression="&quot;cantumkan nilai akhir&quot;" newline="True"/>
+            <input variable="nilaiRizkiA"/>
+            <for variable="factorialRizkiA" start="nilaiRizkiA" end="2" direction="dec" step="1">
+                <assign variable="nilaiRizkiA" expression="nilaiRizkiA*factorialRizkiA"/>
+            </for>
+            <output expression="&quot;hasil factorial &quot;&amp;nilaiRizkiA" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

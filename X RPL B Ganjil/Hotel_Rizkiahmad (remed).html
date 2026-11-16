@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RESERVASI KAMARUNG'S HOTEL</title>
+</head>
+<body>
+    <center><br><br><br><br><br><br><br><br>
+    <h2>Aplikasi Reservasi Kamarung's Hotel</h2>
+    <script>
+        var rizkiaHargap
+        var rizkiaTamu
+        var rizkiaJenisk
+        var rizkiaJumlahm
+        var rizkiaTotalsd
+        var rizkiaDiskon
+        var rizkiaTsetelahd
+        var rizkiaPajak
+        var rizkiaTotalb
+        var rizkiaDiskon1
+        var rizkiasisa
+        var rizkialembar
+        var rizkiauang1
+        var rizkiauang2
+        var rizkiauang3
+        var rizkiauang4
+        var rizkiauang5
+        var rizkiauang6
+        var rizkiauang7
+    </script>
+        Nama Tamu:<br><input type="text" id="rizkiaTamu"><br><br>
+        <label>Pilih Jenis Kamar:</label><br>
+        <select id="rizkiaJenisk">
+            <option value="1">Standard - Rp 300.000/malam</option>
+            <option value="2">Deluxe - Rp 500.000/malam</option>
+            <option value="3">Suite - Rp 800.000/malam</option></select><br><br>
+        Jumlah Malam:<br><input type="number" id="rizkiaJumlahm"><br><br>
+        <button onclick="kirim()">Hitung Total</button>
+    <script>
+        function kirim() {
+        rizkiaTamu = document.getElementById("rizkiaTamu").value
+        rizkiaJenisk = document.getElementById("rizkiaJenisk").value
+        rizkiaJumlahm = document.getElementById("rizkiaJumlahm").value
+        if (rizkiaJenisk==1){
+            rizkiaJenisk= "Standar"
+            rizkiaHargap=300000
+        }else if (rizkiaJenisk==2){
+                    rizkiaJenisk="Deluxe"
+                    rizkiaHargap=500000
+        }else if (rizkiaJenisk==3){
+                    rizkiaJenisk="Suite"
+                    rizkiaHargap=800000
+        }else{
+                    (rizkiaJenisk="Inputan Invalid")
+        }
+                    rizkiaTotalsd=rizkiaHargap*rizkiaJumlahm
+                    if (rizkiaTotalsd>2000000){
+            rizkiaDiskon=0.1
+        }else{
+            rizkiaDiskon=0
+        }
+                    rizkiaDiskon1=rizkiaTotalsd*rizkiaDiskon
+                    rizkiaTsetelahd=rizkiaTotalsd-rizkiaDiskon1
+                    rizkiaPajak=rizkiaTsetelahd*0.1
+                    rizkiaTotalb=rizkiaTsetelahd+rizkiaPajak
+                    
+                    document.write("Nama Tamu: " + rizkiaTamu)
+                    document.write("<br>Jenis Kamar: " + rizkiaJenisk + "<br>")
+                    document.write("Harga Per Malam: " + rizkiaHargap + "<br>")
+                    document.write("Jumlah Malam: " + rizkiaJumlahm + "<br>")
+                    document.write("Total Sebelum Diskon: " + rizkiaTotalsd + "<br>")
+                    document.write("Diskon: " + rizkiaDiskon1 + "<br>")
+                    document.write("Total Setelah Diskon: " + rizkiaTsetelahd + "<br>")
+                    document.write("pajak 10%: " + rizkiaPajak + "<br>")
+                    document.write("Total Biaya: " + rizkiaTotalb + "<br>")
+        
+                    if (rizkiaTotalb > 0){
+                        rizkiauang1=rizkiaTotalb%100000;
+                        rizkiasisa=(rizkiaTotalb-rizkiauang1)/100000;
+                        rizkialembar=rizkiasisa;
+                        document.write("Lembar uang 100.000: " + rizkialembar + "<br>")
+                    }
+                    if (rizkiaTotalb > 0){
+                        rizkiauang2=rizkiaTotalb%50000;
+                        rizkiasisa=(rizkiauang1-rizkiauang2)/50000;
+                        rizkialembar=rizkiasisa;
+                        document.write("Lembar uang 50.000: " + rizkialembar + "<br>")
+                    }
+                    if (rizkiaTotalb > 0){
+                        rizkiauang3=rizkiaTotalb%20000;
+                        rizkiasisa=(rizkiauang2-rizkiauang3)/20000;
+                        rizkialembar=rizkiasisa;
+                        document.write("Lembar uang 20.000: " + rizkialembar + "<br>")
+                    }
+                    if (rizkiaTotalb > 0){
+                        rizkiauang4=rizkiaTotalb%10000;
+                        rizkiasisa=(rizkiauang3-rizkiauang4)/10000;
+                        rizkialembar=rizkiasisa;
+                        document.write("Lembar uang 10.000: " + rizkialembar + "<br>")
+                    }
+                    if (rizkiaTotalb > 0){
+                        rizkiauang5=rizkiaTotalb%5000;
+                        rizkiasisa=(rizkiauang4-rizkiauang5)/5000;
+                        rizkialembar=rizkiasisa;
+                        document.write("Lembar uang 5.000: " + rizkialembar + "<br>")
+                    }
+                    if (rizkiaTotalb > 0){
+                        rizkiauang6=rizkiaTotalb%2000;
+                        rizkiasisa=(rizkiauang5-rizkiauang6)/2000;
+                        rizkialembar=rizkiasisa;
+                        document.write("Lembar uang 2.000: " + rizkialembar + "<br>")
+                    }
+                    if (rizkiaTotalb > 0){
+                        rizkiauang7=rizkiaTotalb%1000;
+                        rizkiasisa=(rizkiauang6-rizkiauang7)/1000;
+                        rizkialembar=rizkiasisa;
+                        document.write("Lembar uang 1.000: " + rizkialembar)
+                    }
+        }
+    </script>
+    </center>
+</body>
+</html>

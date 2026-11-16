@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-19 11:43:00 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMDktMTk7MTE6MjI6NTIgQU07MjI3Nw=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMDktMTk7MTE6NDM6MDAgQU07MTsyMzgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="RizkiaBulan" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan angka 1-12 untuk melihat bulan bulan masehi :&quot;" newline="True"/>
+            <input variable="RizkiaBulan"/>
+            <if expression="RizkiaBulan=1">
+                <then>
+                    <output expression="&quot;anda memilih bulan januari yang memiliki 31 hari&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="RizkiaBulan=2">
+                        <then>
+                            <output expression="&quot;anda memilih bulan Februari yang memiliki 29 hari&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="RizkiaBulan=3">
+                                <then>
+                                    <output expression="&quot;anda memilih bulan maret yang memiliki 31 hari&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="RizkiaBulan=4">
+                                        <then>
+                                            <output expression="&quot;anda memilih bulan april yang memiliki 30 hari&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="RizkiaBulan=5">
+                                                <then>
+                                                    <output expression="&quot;anda memilih bulan mei yang memiliki 31 hari&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="RizkiaBulan=6">
+                                                        <then>
+                                                            <output expression="&quot;anda memilih bulan juni yang memiliki 30 hari&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="RizkiaBulan=7">
+                                                                <then>
+                                                                    <output expression="&quot;anda memilih bulan juli yang memiliki 31 hari&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="RizkiaBulan=8">
+                                                                        <then>
+                                                                            <output expression="&quot;anda memilih bulan agustus yang memiliki 31 hari&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="RizkiaBulan=9">
+                                                                                <then>
+                                                                                    <output expression="&quot;anda memilih bulan september yang memiliki 30 hari&quot;" newline="True"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="RizkiaBulan=10">
+                                                                                        <then>
+                                                                                            <output expression="&quot;anda memilih bulan oktober yang memiliki 31 hari&quot;" newline="True"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <if expression="RizkiaBulan=11">
+                                                                                                <then>
+                                                                                                    <output expression="&quot;anda memilih bulan november yang memiliki 30 hari&quot;" newline="True"/>
+                                                                                                </then>
+                                                                                                <else>
+                                                                                                    <if expression="RizkiaBulan=12">
+                                                                                                        <then>
+                                                                                                            <output expression="&quot;anda memilih bulan desember yang memiliki 31 hari&quot;" newline="True"/>
+                                                                                                        </then>
+                                                                                                        <else>
+                                                                                                            <output expression="&quot;Tidak ada bulan ke 13 dan seterusnya&quot;" newline="True"/>
+                                                                                                        </else>
+                                                                                                    </if>
+                                                                                                </else>
+                                                                                            </if>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

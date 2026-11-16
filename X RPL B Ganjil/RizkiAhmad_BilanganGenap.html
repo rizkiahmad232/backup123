@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<body>
+    <style>
+        body{background-color: skyblue;}
+    </style>
+    <head>
+        <script>
+            let GenapRizkiA
+            let Number1RizkiA
+            let Number2RizkiA
+        </script>
+    </head>
+    <center>
+    <form>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <h1>BILANGAN GENAP</h1>
+        Masukan batas atas : <br><br> <input type="number" id="GenapRizkiA" placeholder="Batas"> <br><br>
+        <button onclick="kirim()">Hitung Jumlah Genap</button>
+    </form>
+    <script>
+        function kirim() {
+            Number2RizkiA=0
+            GenapRizkiA= Number (document.getElementById("GenapRizkiA").value)
+            for (Number1RizkiA=GenapRizkiA;Number1RizkiA>1;Number1RizkiA--){
+                if( Number1RizkiA%2==0){
+                    Number2RizkiA=Number1RizkiA+Number2RizkiA
+                }  
+            }
+            document.write("Jumlah bilangan genap dari 1 sampai "+GenapRizkiA + "adalah " + Number2RizkiA)
+        } 
+    </script>
+    </center>
+</body>
+</html>

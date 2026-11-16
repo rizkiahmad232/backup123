@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <Form>
+        Mata Pelajaran 1 : <input type="text" id="mapel1"><br>
+        Nilai 1 : <input type="number" id="nilai1"><br>
+        Mata Pelajaran 2 : <input type="text" id="mapel2"><br>
+        Nilai 2 : <input type="number" id="nilai2"><br>
+        Mata Pelajaran 3 : <input type="text" id="mapel3"><br>
+        Nilai 3 : <input type="number" id="nilai3"><br>
+        <button onclick ="Send()">Send</button>
+    </Form>
+    <script>
+        function Send() {
+            mapel1 = document.getElementById("mapel1").value
+            mapel2 = document.getElementById("mapel2").value
+            mapel3 = document.getElementById("mapel3").value
+            nilai1 = Number (document.getElementById("nilai1").value)
+            nilai2 = Number (document.getElementById("nilai2").value)
+            nilai3 = Number (document.getElementById("nilai3").value)
+            ratarata=((nilai1+nilai2+nilai3)/3)
+            if (ratarata>=90 && ratarata<=100){
+                Predikat="A"
+            } else if (ratarata>=80 && ratarata<90){
+                Predikat="B"
+            } else if (ratarata>=70 && ratarata<80){
+                Predikat="C"
+            } else if (ratarata>=60 && ratarata<70){
+                Predikat="D"
+            } else if (ratarata>=0 && ratarata<60){
+                Predikat="E"
+            } else {
+                Predikat="inputan tidak valid"
+            }
+
+            document.write("Mata Pelajaran 1 : " + mapel1 + "<br>" + "Nilai 1 : " + nilai1 + "<br>")
+            document.write("Mata Pelajaran 2 : " + mapel2 + "<br>" + "Nilai 2 : " + nilai2 + "<br>")
+            document.write("Mata Pelajaran 3 : " + mapel3 + "<br>" + "Nilai 3 : " + nilai3 + "<br>")
+            document.write("rata-rata nilai : " + ratarata + "<br>" + "predikat = " + Predikat)
+
+        }
+    </script>
+</body>
+</html>

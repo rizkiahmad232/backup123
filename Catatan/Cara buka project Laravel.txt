@@ -1,0 +1,6 @@
+Cara buka project Laravel:
+1. copy folder projek, buka di VS Code
+2. masuk ke terminal
+3. migrate db nya dl: php artisan migrate
+4. run Laravel : php artisan serve
+5. buka pada browser

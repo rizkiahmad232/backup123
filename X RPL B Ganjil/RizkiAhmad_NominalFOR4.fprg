@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-23 08:07:48 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMDktMjU7MTA6NDA6MjAgQU07MjI2OA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjM7MDg6MDc6NDggQU07MjsyMzg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="uangRAM, nominalRAM, sisaRAM, lembarRAM, pecahanRAM" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan nominal uang yang anda miliki :&quot;" newline="True"/>
+            <input variable="nominalRAM"/>
+            <for variable="pecahanRAM" start="1" end="1" direction="inc" step="1">
+                <assign variable="uangRAM" expression="nominalRAM%100000"/>
+                <assign variable="sisaRAM" expression="nominalRAM-uangRAM"/>
+                <assign variable="LembarRAM" expression="sisaRAM/100000"/>
+                <output expression="&quot;Lembar uang 100.000 : &quot;&amp;lembarRAM" newline="True"/>
+                <assign variable="nominalRAM" expression="uangRAM"/>
+            </for>
+            <for variable="pecahanRAM" start="1" end="1" direction="inc" step="1">
+                <assign variable="uangRAM" expression="nominalRAM%50000"/>
+                <assign variable="sisaRAM" expression="nominalRAM-uangRAM"/>
+                <assign variable="LembarRAM" expression="sisaRAM/50000"/>
+                <output expression="&quot;Lembar uang 50.000 : &quot;&amp;lembarRAM" newline="True"/>
+                <assign variable="nominalRAM" expression="uangRAM"/>
+            </for>
+            <for variable="pecahanRAM" start="1" end="1" direction="inc" step="1">
+                <assign variable="uangRAM" expression="nominalRAM%20000"/>
+                <assign variable="sisaRAM" expression="nominalRAM-uangRAM"/>
+                <assign variable="LembarRAM" expression="sisaRAM/20000"/>
+                <output expression="&quot;Lembar uang 20.000 : &quot;&amp;lembarRAM" newline="True"/>
+                <assign variable="nominalRAM" expression="uangRAM"/>
+            </for>
+            <for variable="pecahanRAM" start="1" end="1" direction="inc" step="1">
+                <assign variable="uangRAM" expression="nominalRAM%10000"/>
+                <assign variable="sisaRAM" expression="nominalRAM-uangRAM"/>
+                <assign variable="LembarRAM" expression="sisaRAM/10000"/>
+                <output expression="&quot;Lembar uang 10.000 : &quot;&amp;lembarRAM" newline="True"/>
+                <assign variable="nominalRAM" expression="uangRAM"/>
+            </for>
+            <for variable="pecahanRAM" start="1" end="1" direction="inc" step="1">
+                <assign variable="uangRAM" expression="nominalRAM%5000"/>
+                <assign variable="sisaRAM" expression="nominalRAM-uangRAM"/>
+                <assign variable="LembarRAM" expression="sisaRAM/5000"/>
+                <output expression="&quot;Lembar uang 5.000 : &quot;&amp;lembarRAM" newline="True"/>
+                <assign variable="nominalRAM" expression="uangRAM"/>
+            </for>
+            <for variable="pecahanRAM" start="1" end="1" direction="inc" step="1">
+                <assign variable="uangRAM" expression="nominalRAM%2000"/>
+                <assign variable="sisaRAM" expression="nominalRAM-uangRAM"/>
+                <assign variable="LembarRAM" expression="sisaRAM/2000"/>
+                <output expression="&quot;Lembar uang 2.000 : &quot;&amp;lembarRAM" newline="True"/>
+                <assign variable="nominalRAM" expression="uangRAM"/>
+            </for>
+            <for variable="pecahanRAM" start="1" end="1" direction="inc" step="1">
+                <assign variable="uangRAM" expression="nominalRAM%1000"/>
+                <assign variable="sisaRAM" expression="nominalRAM-uangRAM"/>
+                <assign variable="LembarRAM" expression="sisaRAM/1000"/>
+                <output expression="&quot;Lembar uang 1.000 : &quot;&amp;lembarRAM" newline="True"/>
+                <assign variable="nominalRAM" expression="uangRAM"/>
+            </for>
+            <for variable="pecahanRAM" start="1" end="1" direction="inc" step="1">
+                <assign variable="uangRAM" expression="nominalRAM%500"/>
+                <assign variable="sisaRAM" expression="nominalRAM-uangRAM"/>
+                <assign variable="LembarRAM" expression="sisaRAM/500"/>
+                <output expression="&quot;Lembar uang 500 : &quot;&amp;lembarRAM" newline="True"/>
+                <assign variable="nominalRAM" expression="uangRAM"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

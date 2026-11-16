@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIODATA SISWA</title>
+</head>
+<body>
+    <center> 
+    <script>
+        function lanjut() {
+        nama=document.getElementById("nama").value
+        kelas=document.getElementById("kelas").value
+        mapel=document.getElementById("mapel").value
+        nilai=Number(document.getElementById("nilai").value)
+        uts=Number(document.getElementById("uts").value)
+        pas= Number(document.getElementById("pas").value)
+        ratarata=Number(nilai+uts+pas)/3
+
+        document.write(`nama : `+nama+"<br>")
+        document.write(`kelas : `+kelas+"<br>")
+        document.write(`mapel : `+mapel+"<br>")
+        document.write(`nilai : `+nilai+"<br>")
+        document.write(`uts : `+uts+"<br>")
+        document.write(`pas : `+pas+"<br>")
+        document.write(`Rata-Rata : `+ratarata+"<br>")
+
+        }
+    </script>
+    
+    <h1>BIODATA NILAI</h1>
+    <label>nama  : </label>
+    <input type="text" id="nama" placeholder="nama"><br>
+    <label>kelas : </label>
+    <input type="text" id="kelas" placeholder="kelas"><br>
+    <label>mapel : </label>
+    <input type="text" id="mapel" placeholder="mapel"><br>
+    <label>nilai : </label>
+    <input type="number" id="nilai" placeholder="nilai"><br>
+    <label>UTS   : </label>
+    <input type="number" id="uts" placeholder="UTS"><br>
+    <label>PTS   : </label>
+    <input type="number" id="pas" placeholder="PAS"><br>
+    <button onclick="lanjut()">lanjut</button>
+    </center>
+    
+
+
+</body>
+</html>

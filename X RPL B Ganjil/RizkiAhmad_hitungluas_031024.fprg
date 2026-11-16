@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 09:39:15 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MDg6Mjk6NDYgQU07MjI3OA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MDk6Mzk6MTUgQU07MjsyMzg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="RizkiAMbangundatar, RizkiAMangka1, RizkiAMangka2, RizkiAMluas" type="Real" array="False" size=""/>
+            <output expression="&quot;Pilih Bangun Datar (angkanya saja) : 1.Persegi 2.lingkaran 3.segitiga&quot;" newline="True"/>
+            <input variable="RizkiAMbangundatar"/>
+            <if expression="RizkiAMbangundatar=1">
+                <then>
+                    <output expression="&quot;Anda memilih bangun datar persegi&quot;" newline="True"/>
+                    <output expression="&quot;untuk menghitung luas persegi tolong masukan Nilai sisi 1 : &quot;" newline="True"/>
+                    <input variable="RizkiAMangka1"/>
+                    <output expression="&quot;masukkan nilai sisi 2 : &quot;" newline="True"/>
+                    <input variable="RizkiAMangka2"/>
+                    <if expression="RizkiAMangka1=RizkiAMangka2">
+                        <then>
+                            <assign variable="RizkiAMluas" expression="RizkiAMangka1*RizkiAMangka2"/>
+                            <output expression="&quot;Luas persegi adalah &quot;&amp;RizkiAMluas" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="RizkiAMluas" expression="RizkiAMangka1*RizkiAMangka2"/>
+                            <output expression="&quot;Luas persegi panjang adalah &quot;&amp;RizkiAMluas" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="RizkiAMbangundatar=2">
+                        <then>
+                            <output expression="&quot;Anda memilih bangun datar lingkaran&quot;" newline="True"/>
+                            <output expression="&quot;untuk menghitung luas lingkaran tolong masukan jari-jarinya : &quot;" newline="True"/>
+                            <input variable="RizkiAMangka1"/>
+                            <assign variable="RizkiAMluas" expression="(22/7)*RizkiAMangka1*RizkiAMangka1"/>
+                            <output expression="&quot;Luas Lingkaran adalah : &quot;&amp;RizkiAMluas" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="RizkiAMbangundatar=3">
+                                <then>
+                                    <output expression="&quot;Anda memilih bangun datar segitiga&quot;" newline="True"/>
+                                    <output expression="&quot;Untuk menghitung luas segitiga tolong masukan alasnya&quot;" newline="True"/>
+                                    <input variable="RizkiAMangka1"/>
+                                    <output expression="&quot;masukan tingginya&quot;" newline="True"/>
+                                    <input variable="RizkiAMangka2"/>
+                                    <assign variable="RizkiAMluas" expression="(1/2)*RizkiAMangka1*RizkiAMangka2"/>
+                                    <output expression="&quot;Luas segitiga adalah &quot;&amp;RizkiAMluas" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;bangun datar yang anda pilih tidak valid&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <center> <br><br>
+<body>
+
+    
+
+    <form>
+        <h3>PAKET 1 MAKANAN :</h3>
+        1. Chicken - Rp20.000 <br>
+        2. Beef - Rp30.000 <br><br><select id="paketrizkia">
+            <option>Paket Chicken - Rp20.000</option>
+            <option>Paket Beef - Rp30.000 </option></select><br><br>
+            Jumlah Pesan : <br><input type="number" id="pesanrizkia"><br>
+            <h3>PAKET 2 MINUMAN :</h3>
+    1. Coffe - Rp15.000 <br>
+    2. Non Coffe - Rp10.000 <br><br><select id="paket1rizkia">
+            <option>Paket Coffe - Rp15.000</option>
+            <option>Paket Non Coffe - Rp10.000</option></select><br><br>
+            Jumlah Pesan : <br><input type="number" id="pesan1rizkia"><br><br>
+            apakah anda member ?<br><select id="memberrizkia">
+            <option>IYA</option>
+            <option>TIDAK</option></select><br><br>
+            Uang yang diberikan : <br><input type="number" id="uangrizkia"><br><br>
+            <button onclick="kirim ()">kirim</button>
+    </form>
+</center>
+    <script>
+        function kirim () {
+            paketrizkia=document.getElementById("paketrizkia").value
+            paket1rizkia=document.getElementById("paket1rizkia").value
+            pesanrizkia=Number (document.getElementById("pesanrizkia").value)
+            pesan1rizkia=Number (document.getElementById("pesan1rizkia").value)
+            memberrizkia=document.getElementById("memberrizkia").value
+            uangrizkia=document.getElementById("uangrizkia").value
+
+            if (paketrizkia=="Paket Chicken - Rp20.000") {
+                hargarizkia=20000
+            }else if (paketrizkia=="Paket Beef - Rp30.000"){
+                hargarizkia=30000
+            }else{
+                "Tidak valid"
+            }
+
+            if (paket1rizkia=="Paket Coffe - Rp15.000") {
+                harga1rizkia=15000
+            }else if (paketrizkia=="Paket Non Coffe - Rp10.000"){
+                harga1rizkia=10000
+            }else{
+                "Tidak valid"
+            }
+                bayarrizkia=paketrizkia*pesanrizkia
+                bayar1rizkia=paket1rizkia*pesan1rizkia
+
+                document.write("Menu Yang Dipilih : " + "<br>" + paketrizkia + "x" + pesanrizkia+ "<br>" + paket1rizkia  + "x" + pesan1rizkia + "<br>")
+                document.write("Harga : " + "<br>"+ hargarizkia + "<br>" + harga1rizkia + "<br>")
+        }
+    </script>
+
+</body>
+</html>

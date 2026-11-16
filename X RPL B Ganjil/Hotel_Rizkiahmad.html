@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var rizkiaHargap
+        var rizkiaTamu
+        var rizkiaJenisk
+        var rizkiaJumlahm
+        var rizkiaTotalsd
+        var rizkiaDiskon
+        var rizkiaTsetelahd
+        var rizkiaPajak
+        var rizkiaTotalb
+        var rizkiapecahanuang
+    </script>
+    <center>
+    <form>
+        Nama Tamu:<br><input type="text" id="rizkiaTamu"><br><br>
+        Pilih Jenis Kamar: <br><input type="number" id="rizkiaJenisk"><br>
+        Pilihan : <br> > 1. Standar-Rp 300.000/Malam <br>
+        > 2. Deluxe-Rp 500.000/malam <br> > 3. Suite-Rp 800.000/malam<br><br>
+        Jumlah Malam:<br><input type="number" id="rizkiaJumlahm"><br><br>
+        <button onclick="kirim()">Hitung Total</button>
+    </form>
+    <script>
+        function kirim() {
+        rizkiaTamu = document.getElementById("rizkiaTamu").value
+        rizkiaJenisk = document.getElementById("rizkiaJenisk").value
+        rizkiaJumlahm = document.getElementById("rizkiaJumlahm").value
+        if (rizkiaJenisk==1){
+            rizkiaJenisk= "Standar"
+            rizkiaHargap=300000
+        }else if (rizkiaJenisk==2){
+                    rizkiaJenisk="Deluxe"
+                    rizkiaHargap=500000
+        }else if (rizkiaJenisk==3){
+                    rizkiaJenisk="Suite"
+                    rizkiaHargap=800000
+        }else{
+                    (rizkiaJenisk="Inputan Invalid")
+        }
+                    rizkiaTotalsd=rizkiaHargap*rizkiaJumlahm
+                    rizkiaDiskon=rizkiaTotalsd*0.1
+                    rizkiaTsetelahd=rizkiaTotalsd-rizkiaDiskon
+                    rizkiaPajak=rizkiaTsetelahd*0.1
+                    rizkiaTotalb=rizkiaTsetelahd+rizkiaPajak
+                    
+                    document.write("Nama Tamu: " + rizkiaTamu)
+                    document.write("<br>Jenis Kamar: " + rizkiaJenisk + "<br>")
+                    document.write("Harga Per Malam: " + rizkiaHargap + "<br>")
+                    document.write("Jumlah Malam: " + rizkiaJumlahm + "<br>")
+                    document.write("Total Sebelum Diskon: " + rizkiaTotalsd + "<br>")
+                    document.write("Diskon: " + rizkiaDiskon + "<br>")
+                    document.write("Total Setelah Diskon: " + rizkiaTsetelahd + "<br>")
+                    document.write("pajak 10%: " + rizkiaPajak + "<br>")
+                    document.write("Total Biaya: " + rizkiaTotalb)
+        }
+    </script>
+    </center>
+</body>
+</html>

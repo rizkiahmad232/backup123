@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-16 08:38:48 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMTY7MDc6NDg6MjggUE07MjI5Nw=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMTY7MDg6Mzg6NDggUE07MTsyNDA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bintangRizkiA, barisRizkiA, bintang1RizkiA, cetakRizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan bintang yang anda inginkan :&quot;" newline="True"/>
+            <input variable="barisRizkiA"/>
+            <output expression="&quot;masukan tinggi yang akan dicetak&quot;" newline="True"/>
+            <input variable="cetakRizkiA"/>
+            <for variable="bintangRizkiA" start="1" end="cetakRizkiA" direction="inc" step="1">
+                <for variable="bintang1RizkiA" start="1" end="barisRizkiA" direction="inc" step="1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-23 12:00:05 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjM7MTE6MDk6MTIgQU07MjI2NQ=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjM7MTI6MDA6MDUgUE07MTsyMzgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="menuRAM, alasRAM, tinggiRAM, luasRAM, sisiRAM" type="Real" array="False" size=""/>
+            <declare name="pilihanRAM" type="String" array="False" size=""/>
+            <do expression="pilihanRAM= &quot;Y&quot;">
+                <output expression="&quot;Menu Pilihan :&quot; &amp;ToChar(13)&amp;&#13;&#10;&quot;1. Luas segitiga&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2. Luas persegi&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;pilih (1/2)&quot;" newline="True"/>
+                <input variable="menuRAM"/>
+                <if expression="menuRAM==1">
+                    <then>
+                        <output expression="&quot;Luas segitiga&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;untuk menjalankan rumus, tolong masukan alas segitiga : &quot;" newline="True"/>
+                        <input variable="alasRAM"/>
+                        <output expression="&quot;lalu masukan tinggi nya : &quot;" newline="True"/>
+                        <input variable="tinggiRAM"/>
+                        <assign variable="luasRAM" expression="1/2*alasRAM*tinggiRAM"/>
+                        <output expression="&quot;Luas segitiga : &quot;&amp;luasRAM" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Luas persegi&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;untuk menjalankan rumus, tolong masukan sisi : &quot;" newline="True"/>
+                        <input variable="sisiRAM"/>
+                        <assign variable="luasRAM" expression="sisiRAM*sisiRAM"/>
+                        <output expression="luasRAM" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;apakah akan diulangi ? (Y/T) &quot;" newline="True"/>
+                <input variable="pilihanRAM"/>
+                <if expression="pilihanRAM=&quot;Y&quot;||pilihanRAM=&quot;T&quot;">
+                    <then/>
+                    <else>
+                        <while expression="pilihanRAM!=&quot;Y&quot; &amp;&amp; pilihanRAM!=&quot;T&quot;">
+                            <output expression="&quot;apakah akan diulangi ? (Y/T) &quot;" newline="True"/>
+                            <input variable="pilihanRAM"/>
+                        </while>
+                    </else>
+                </if>
+            </do>
+            <output expression="&quot;Selesai&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-09 10:22:36 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MDk6NTk6MzggUE07MjMwNA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MTA6MjI6MzYgUE07MTsyMzky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="angkaRizkiA, batasRizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;Aplikasi untuk mencetak nilai genap pada rentang tertentu&quot;" newline="True"/>
+            <output expression="&quot;masukan batas akhir angka : &quot;" newline="True"/>
+            <input variable="batasRizkiA"/>
+            <for variable="angkaRizkiA" start="1" end="batasRizkiA" direction="inc" step="1">
+                <if expression="angkaRizkiA%2=0">
+                    <then>
+                        <output expression="angkaRizkiA" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;angka ganjil &quot;&amp;angkaRizkiA" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

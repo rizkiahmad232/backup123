@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 11:28:37 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MTE6MjE6MTMgQU07MjI1OA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MTE6Mjg6MzcgQU07MjsyMzgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nilaiujianRAM, sertifikatRAM" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan nilai ujian&quot;" newline="True"/>
+            <input variable="nilaiujianRAM"/>
+            <output expression="&quot;Apakah anda memiliki sertifikat tambahan? 1.Ya 2.Tidak&quot;" newline="True"/>
+            <input variable="sertifikatRAM"/>
+            <if expression="(nilaiujianRAM&gt;70) || (sertifikatRAM==1)">
+                <then>
+                    <output expression="&quot;lulus&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;tidak lulus&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

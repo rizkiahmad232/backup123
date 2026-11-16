@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-24 12:22:57 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjQ7MTE6MTY6NDcgQU07MjI3Mg=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjQ7MTI6MjI6NTcgUE07MjsyMzk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nilai1RAM, nilai2RAM, nilai3RAM, nilai4RAM, menuRAM, hitungRAM, menu1RAM" type="Real" array="False" size=""/>
+            <declare name="kembaliRAM, operasiRAM" type="String" array="False" size=""/>
+            <do expression="kembaliRAM=&quot;Y&quot;||kembaliRAM=&quot;y&quot;">
+                <output expression="&quot;menu&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;1. Kalkulator&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2. Hitung Luas Bidang&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;3. Hitung Keliling Bidang&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;Pilih (1/2/3)&quot;" newline="True"/>
+                <input variable="menuRAM"/>
+                <if expression="menuRAM=1">
+                    <then>
+                        <output expression="&quot;anda memilih kalkulator&quot;" newline="True"/>
+                        <output expression="&quot;masukan angka pertama&quot;" newline="True"/>
+                        <input variable="nilai1RAM"/>
+                        <output expression="&quot;Masukan angka kedua&quot;" newline="True"/>
+                        <input variable="nilai2RAM"/>
+                        <output expression="&quot;masukan operasinya : (kali/bagi/tambah/kurang)&quot;" newline="True"/>
+                        <input variable="operasiRAM"/>
+                        <if expression="operasiRAM==&quot;kali&quot;">
+                            <then>
+                                <assign variable="hitungRAM" expression="nilai1RAM*nilai2RAM"/>
+                                <output expression="hitungRAM" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="operasiRAM==&quot;bagi&quot;">
+                                    <then>
+                                        <assign variable="hitungRAM" expression="nilai1RAM/nilai2RAM"/>
+                                        <output expression="hitungRAM" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="operasiRAM==&quot;tambah&quot;">
+                                            <then>
+                                                <assign variable="hitungRAM" expression="nilai1RAM+nilai2RAM"/>
+                                                <output expression="hitungRAM" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="operasiRAM==&quot;kurang&quot;">
+                                                    <then>
+                                                        <assign variable="hitungRAM" expression="nilai1RAM-nilai2RAM"/>
+                                                        <output expression="hitungRAM" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;invalid&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="menuRAM=2">
+                            <then>
+                                <output expression="&quot;anda memilih Hitung Luas Bidang&quot;" newline="True"/>
+                                <output expression="&quot;Menu Pilihan :&quot; &amp;ToChar(13)&amp;&#13;&#10;&quot;1. Luas segitiga&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2. Luas persegi&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;3. Luas Lingkaran&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;pilih (1/2/3)&quot;" newline="True"/>
+                                <input variable="menu1RAM"/>
+                                <if expression="menu1RAM==1">
+                                    <then>
+                                        <output expression="&quot;Luas segitiga&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;untuk menjalankan rumus, tolong masukan alas segitiga : &quot;" newline="True"/>
+                                        <input variable="nilai1RAM"/>
+                                        <output expression="&quot;lalu masukan tingginya : &quot;" newline="True"/>
+                                        <input variable="nilai2RAM"/>
+                                        <assign variable="hitungRAM" expression="1/2*nilai1RAM*nilai2RAM"/>
+                                        <output expression="&quot;Luas Segitiga : &quot;&amp;hitungRAM" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="menu1RAM==2">
+                                            <then>
+                                                <output expression="&quot;Luas persegi&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;untuk menjalankan rumus, tolong masukan panjang persegi : &quot;" newline="True"/>
+                                                <input variable="nilai1RAM"/>
+                                                <output expression="&quot;lalu masukan lebar persegi&quot;" newline="True"/>
+                                                <input variable="nilai2RAM"/>
+                                                <assign variable="hitungRAM" expression="nilai1RAM*nilai2RAM"/>
+                                                <output expression="&quot;Luas Persegi : &quot;&amp;hitungRAM" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="menu1RAM==3">
+                                                    <then>
+                                                        <output expression="&quot;Luas Lingkaran&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;untuk menjalankan rumus, tolong masukan jari-jarinya : &quot;" newline="True"/>
+                                                        <input variable="nilai1RAM"/>
+                                                        <assign variable="hitungRAM" expression="3.14*nilai1RAM*nilai1RAM"/>
+                                                        <output expression="&quot;Luas Lingkaran : &quot;&amp;hitungRAM" newline="True"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="menuRAM=3">
+                                    <then>
+                                        <output expression="&quot;anda memilih Hitung Keliling Bidang&quot;" newline="True"/>
+                                        <output expression="&quot;Menu Pilihan :&quot; &amp;ToChar(13)&amp;&#13;&#10;&quot;1. Keliling Lingkaran&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2. Keliling persegi&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;3. keliling persegi panjang&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;pilih (1/2/3)&quot;" newline="True"/>
+                                        <input variable="menu1RAM"/>
+                                        <if expression="menu1RAM==1">
+                                            <then>
+                                                <output expression="&quot;Keliling Lingkaran&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;untuk menjalankan rumus, tolong masukan jari-jarinya : &quot;" newline="True"/>
+                                                <input variable="nilai1RAM"/>
+                                                <assign variable="hitungRAM" expression="2*3.14*nilai1RAM"/>
+                                                <output expression="hitungRAM" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="menu1RAM==2">
+                                                    <then>
+                                                        <output expression="&quot;Keliling Persegi&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;untuk menjalankan rumus, tolong masukan sisi : &quot;" newline="True"/>
+                                                        <input variable="nilai1RAM"/>
+                                                        <assign variable="hitungRAM" expression="nilai1RAM*4"/>
+                                                        <output expression="hitungRAM" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="menu1RAM==3">
+                                                            <then>
+                                                                <output expression="&quot;Keliling Persegi Panjang&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;untuk menjalankan rumus, tolong masukan panjang : &quot;" newline="True"/>
+                                                                <input variable="nilai1RAM"/>
+                                                                <output expression="&quot;Lalu masukan lebarnya : &quot;" newline="True"/>
+                                                                <input variable="nilai2RAM"/>
+                                                                <assign variable="hitungRAM" expression="2*(nilai1RAM*nilai2RAM)"/>
+                                                                <output expression="hitungRAM" newline="True"/>
+                                                            </then>
+                                                            <else/>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;invald&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <do expression="(kembaliRAM!=&quot;Y&quot;)&amp;&amp;(kembaliRAM!=&quot;y&quot;)&amp;&amp;(kembaliRAM!=&quot;T&quot;)&amp;&amp;(kembaliRAM!=&quot;t&quot;)">
+                    <output expression="&quot;apakah anda ingin mengulang ke menu awal?(Y/T)&quot;" newline="True"/>
+                    <input variable="kembaliRAM"/>
+                </do>
+            </do>
+            <output expression="&quot;Selesai&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

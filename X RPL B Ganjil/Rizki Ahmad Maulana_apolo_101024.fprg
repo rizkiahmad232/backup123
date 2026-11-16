@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-09 09:03:48 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MDg6NTQ6MTkgUE07MjI5Nw=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MDk6MDM6NDggUE07MTsyNDAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="apoloRizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;apolo akan meluncur dalam 5 detik&quot;" newline="True"/>
+            <for variable="apoloRizkiA" start="5" end="1" direction="dec" step="1">
+                <output expression="apoloRizkiA" newline="True"/>
+            </for>
+            <output expression="&quot;Apolo meluncur&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

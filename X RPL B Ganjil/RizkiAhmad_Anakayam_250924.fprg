@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-25 09:20:06 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMDktMjU7MDg6MjE6MTQgQU07MjI3Nw=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMDktMjU7MDk6MjA6MDYgQU07MTsyMzg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="anakayam" type="Integer" array="False" size=""/>
+            <assign variable="anakayam" expression="6"/>
+            <if expression="anakayam&gt;1">
+                <then>
+                    <assign variable="anakayam" expression="anakayam-1"/>
+                    <output expression="anakayam" newline="True"/>
+                    <if expression="anakayam&gt;1">
+                        <then>
+                            <assign variable="anakayam" expression="anakayam-1"/>
+                            <output expression="anakayam" newline="True"/>
+                            <if expression="anakayam&gt;1">
+                                <then>
+                                    <assign variable="anakayam" expression="anakayam-1"/>
+                                    <output expression="anakayam" newline="True"/>
+                                    <if expression="anakayam&gt;1">
+                                        <then>
+                                            <assign variable="anakayam" expression="anakayam-1"/>
+                                            <output expression="anakayam" newline="True"/>
+                                            <if expression="anakayam&gt;1">
+                                                <then>
+                                                    <assign variable="anakayam" expression="anakayam-1"/>
+                                                    <output expression="anakayam" newline="True"/>
+                                                    <if expression="anakayam&gt;=1">
+                                                        <then>
+                                                            <output expression="&quot;Sisa Induknya&quot;" newline="True"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

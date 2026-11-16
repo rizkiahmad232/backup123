@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-08 08:30:16 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDg7MDg6MTU6MzAgUE07MjI4Ng=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDg7MDg6MzA6MTYgUE07MTsyMzk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pengalamanRizkiA, rekomendasiRizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;apakah siswa tersebut berpengalaman menjadi osis?&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;1.iya&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2.tidak&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;masukan angkanya saja&quot;" newline="True"/>
+            <input variable="pengalamanRizkiA"/>
+            <output expression="&quot;apakah siswa tersebut direkomendasikan oleh guru?&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;1.iya&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2.tidak&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;masukan angkanya saja&quot;" newline="True"/>
+            <input variable="rekomendasiRizkiA"/>
+            <if expression="(pengalamanRizkiA==1)&amp;&amp;(rekomendasiRizkiA==1)">
+                <then>
+                    <output expression="&quot;Siswa bisa menjadi  ketua osis&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="(pengalamanRizkiA==1)&amp;&amp;(rekomendasiRizkiA==2)">
+                        <then>
+                            <output expression="&quot;Siswa bisa menjadi wakil ketua osis&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="(pengalamanRizkiA==2)&amp;&amp;(rekomendasiRizkiA==1)">
+                                <then>
+                                    <output expression="&quot;Siswa bisa menjadi anggota osis&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="(pengalamanRizkiA==2)&amp;&amp;(rekomendasiRizkiA==2)">
+                                        <then>
+                                            <output expression="&quot;Siswa tidak dapat menjadi bagian dari kepengurusan osis&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;inputan tidak valid&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

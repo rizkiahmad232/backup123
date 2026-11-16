@@ -1,0 +1,7 @@
+﻿# System & volume files
+System Volume Information/
+$RECYCLE.BIN/
+
+# Exclude files larger than GitHub's 100MB limit
+*.mp4
+*.rar

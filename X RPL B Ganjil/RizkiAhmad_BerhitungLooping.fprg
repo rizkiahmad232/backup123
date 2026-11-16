@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-24 11:46:23 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjQ7MTA6MDI6MTkgQU07MjI2NQ=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjQ7MTE6NDY6MjMgQU07MTsyMzc3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="menuRAM, factorialRAM, nilaiRAM, deretRAM, genapRAM, nilai1RAM, nilai2RAM, penjumlahanRAM" type="Integer" array="False" size=""/>
+            <declare name="YTRAM" type="String" array="False" size=""/>
+            <do expression="YTRAM=&quot;Y&quot;||YTRAM=&quot;y&quot;">
+                <output expression="&quot;Tampilkan menu pilihan : &quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;1. Hitung Factorial&quot;&amp;ToChar(13)&amp; &#13;&#10;&quot;2. Tampilkan Deret Bilangan Genap dan jumlahnya&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;3. Hitung Penjumlahan Bilangan&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;Inputkan (1/2/3)&quot;" newline="True"/>
+                <input variable="menuRAM"/>
+                <if expression="menuRAM=1">
+                    <then>
+                        <output expression="&quot;cantumkan nilai akhir untuk mencari hasil factorial&quot;" newline="True"/>
+                        <input variable="nilaiRAM"/>
+                        <for variable="factorialRAM" start="nilaiRAM" end="2" direction="dec" step="1">
+                            <assign variable="nilaiRAM" expression="nilaiRAM*(factorialRAM-1)"/>
+                        </for>
+                        <output expression="&quot;Hasil factorial : &quot;&amp;nilaiRAM" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="menuRAM=2">
+                            <then>
+                                <output expression="&quot;cantumkan nilai untuk mencari Deret Bilangan Genap&quot;" newline="True"/>
+                                <input variable="deretRAM"/>
+                                <assign variable="penjumlahanRAM" expression="0"/>
+                                <for variable="genapRAM" start="1" end="deretRAM" direction="inc" step="1">
+                                    <if expression="genapRAM%2=0">
+                                        <then>
+                                            <output expression="genapRAM" newline="True"/>
+                                            <assign variable="penjumlahanRAM" expression="penjumlahanRAM+genapRAM"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </for>
+                                <output expression="penjumlahanRAM" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="menuRAM=3">
+                                    <then>
+                                        <assign variable="penjumlahanRAM" expression="0"/>
+                                        <output expression="&quot;anda memilih penjumlahan bilangan&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;masukan nilai yang anda inginkan&quot;" newline="True"/>
+                                        <input variable="nilai2RAM"/>
+                                        <for variable="nilai1RAM" start="1" end="nilai2RAM" direction="inc" step="1">
+                                            <output expression="nilai1RAM" newline="True"/>
+                                            <assign variable="penjumlahanRAM" expression="penjumlahanRAM+nilai1RAM"/>
+                                        </for>
+                                        <output expression="penjumlahanRAM" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <do expression="(YTRAM!=&quot;Y&quot;)&amp;&amp;(YTRAM!=&quot;y&quot;)&amp;&amp;(YTRAM!=&quot;T&quot;)&amp;&amp;(YTRAM!=&quot;t&quot;)">
+                    <output expression="&quot;apakah anda ingin mengulang ke menu awal?(Y/T)&quot;" newline="True"/>
+                    <input variable="YTRAM"/>
+                </do>
+            </do>
+            <output expression="&quot;Terima kasih sudah menggunakan aplikasi kami&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

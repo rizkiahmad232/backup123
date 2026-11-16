@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-08 08:57:11 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDg7MDg6MzA6MTkgUE07MjI5MA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDg7MDg6NTc6MTEgUE07MTsyMzk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="destinasiRizkiA, perjalananRizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;anda ingin menggunakan destinasi apa?(Pilih angkanya saja)&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;1.domestik&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2.international&quot;" newline="True"/>
+            <input variable="destinasiRizkiA"/>
+            <output expression="&quot;kelas perjalanan anda : &quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;1.ekonomi&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2.bisnis&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;(pilih angkanya saja)&quot;" newline="True"/>
+            <input variable="perjalananRizkiA"/>
+            <if expression="destinasiRizkiA==1">
+                <then>
+                    <if expression="perjalananRizkiA==1">
+                        <then>
+                            <output expression="&quot;Harga tiket : 500000&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="perjalananRizkiA==2">
+                                <then>
+                                    <output expression="&quot;Harga tiket : 1000000&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Tidak valid&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="destinasiRizkiA==2">
+                        <then>
+                            <if expression="perjalananRizkiA==1">
+                                <then>
+                                    <output expression="&quot;Harga tiket : 3000000&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="perjalananRizkiA==2">
+                                        <then>
+                                            <output expression="&quot;Harga tiket : 5000000&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Tidak valid&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Tidak valid&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 11:13:25 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MTA6MDc6MjggQU07MjI2Nw=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MTE6MTM6MjUgQU07MjsyMzcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hargaRizkiAM, harga1RizkiAM, harga2RizkiAM, harga3RizkiAM, harga4RizkiAM, harga5RizkiAM, diskonRizkiAM, totalRizkiAM, pajakRizkiAM, totalhargaRizkiAM, ratarataRizkiAM" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan harga 1 &quot;" newline="True"/>
+            <input variable="harga1RizkiAM"/>
+            <output expression="&quot;masukan harga 2 &quot;" newline="True"/>
+            <input variable="harga2RizkiAM"/>
+            <output expression="&quot;masukan harga 3 &quot;" newline="True"/>
+            <input variable="harga3RizkiAM"/>
+            <output expression="&quot;masukan harga 4 &quot;" newline="True"/>
+            <input variable="harga4RizkiAM"/>
+            <output expression="&quot;masukan harga 5 &quot;" newline="True"/>
+            <input variable="harga5RizkiAM"/>
+            <output expression="&quot;Harga 1 : &quot;&amp;harga1RizkiAM&amp;ToChar(13)&amp;&#13;&#10;&quot;Harga 2 : &quot;&amp;harga2RizkiAM&amp;ToChar(13)&amp;&#13;&#10;&quot;Harga 3 : &quot;&amp;harga3RizkiAM&amp;ToChar(13)&amp;&#13;&#10;&quot;Harga 4 : &quot;&amp;harga4RizkiAM&amp;ToChar(13)&amp;&#13;&#10;&quot;Harga 5 : &quot;&amp;harga5RizkiAM" newline="True"/>
+            <assign variable="hargaRizkiAM" expression="harga1RizkiAM+harga2RizkiAM+harga3RizkiAM+harga4RizkiAM+harga5RizkiAM"/>
+            <if expression="hargaRizkiAM&gt;100000">
+                <then>
+                    <assign variable="diskonRizkiAM" expression="hargaRizkiAM*(10/100)"/>
+                </then>
+                <else>
+                    <if expression="hargaRizkiAM&gt;50000">
+                        <then>
+                            <assign variable="diskonRizkiAM" expression="hargaRizkiAM*(5/100)"/>
+                        </then>
+                        <else>
+                            <if expression="hargaRizkiAM&gt;0">
+                                <then>
+                                    <assign variable="diskonRizkiAM" expression="0"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="totalRizkiAM" expression="hargaRizkiAM-diskonRizkiAM"/>
+            <assign variable="pajakRizkiAM" expression="totalRizkiAM*(10/100)"/>
+            <assign variable="totalhargaRizkiAM" expression="totalRizkiAM+pajakRizkiAM"/>
+            <assign variable="ratarataRizkiAM" expression="hargaRizkiAM/5"/>
+            <output expression="&quot;Total harga : &quot;&amp;hargaRizkiAM&amp;ToChar(13)&amp;&#13;&#10;&quot;diskob : &quot;&amp;diskonRizkiAM&amp;ToChar(13)&amp;&#13;&#10;&quot;Total setelah diskon : &quot;&amp;totalRizkiAM&amp;ToChar(13)&amp;&#13;&#10;&quot;pajak : &quot;&amp;pajakRizkiAM&amp;ToChar(13)&amp;&#13;&#10;&quot;Total Akhir : &quot;&amp;totalhargaRizkiAM&amp;ToChar(13)&amp;&#13;&#10;&quot;Rata-rata harga per barang : &quot;&amp;ratarataRizkiAM" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

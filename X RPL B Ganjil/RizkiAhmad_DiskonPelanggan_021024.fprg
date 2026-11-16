@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-02 10:01:45 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDI7MDc6NDY6NTcgQU07MjI3Nw=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDI7MTA6MDE6NDQgQU07MTsyMzY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="diskon, pembelian, total" type="Integer" array="False" size=""/>
+            <declare name="member" type="String" array="False" size=""/>
+            <output expression="&quot;Masukan pembelian :&quot;" newline="True"/>
+            <input variable="pembelian"/>
+            <output expression="&quot;Pilih dengan mengetik angkanya :&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;1.member&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2.nonmember&quot;" newline="True"/>
+            <input variable="member"/>
+            <if expression="pembelian&gt;10000000">
+                <then>
+                    <if expression="member=&quot;1&quot;">
+                        <then>
+                            <assign variable="diskon" expression="pembelian*20/100"/>
+                            <assign variable="total" expression="pembelian-diskon"/>
+                            <output expression="&quot;Pelanggan adalah member, mendapatkan diskon sebesar 20%&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;diskon : &quot;&amp;diskon&amp;ToChar(13)&amp;&#13;&#10;&quot;total pembayaran : &quot;&amp;total" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="diskon" expression="pembelian*10/100"/>
+                            <assign variable="total" expression="pembelian-diskon"/>
+                            <output expression="&quot;Pelanggan adalah non member, mendapatkan diskon sebesar 10%&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;diskon : &quot;&amp;diskon&amp;ToChar(13)&amp;&#13;&#10;&quot;total pembayaran : &quot;&amp;total" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="pembelian&gt;=5000000&amp;&amp;pembelian&lt;=10000000">
+                        <then>
+                            <if expression="member=&quot;1&quot;">
+                                <then>
+                                    <assign variable="diskon" expression="pembelian*15/100"/>
+                                    <assign variable="total" expression="pembelian-diskon"/>
+                                    <output expression="&quot;Pelanggan adalah member, mendapatkan diskon sebesar 15%&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;diskon : &quot;&amp;diskon&amp;ToChar(13)&amp;&#13;&#10;&quot;total pembayaran : &quot;&amp;total" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="diskon" expression="pembelian*5/100"/>
+                                    <assign variable="total" expression="pembelian-diskon"/>
+                                    <output expression="&quot;Pelanggan adalah non member, mendapatkan diskon sebesar 5%&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;diskon : &quot;&amp;diskon&amp;ToChar(13)&amp;&#13;&#10;&quot;total pembayaran : &quot;&amp;total" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="pembelian&gt;0">
+                                <then>
+                                    <if expression="member=&quot;1&quot;">
+                                        <then>
+                                            <assign variable="diskon" expression="pembelian*5/100"/>
+                                            <assign variable="total" expression="pembelian-diskon"/>
+                                            <output expression="&quot;Pelanggan adalah member, mendapatkan diskon sebesar 5%&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;diskon : &quot;&amp;diskon&amp;ToChar(13)&amp;&#13;&#10;&quot;total pembayaran : &quot;&amp;total" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="diskon" expression="0"/>
+                                            <assign variable="total" expression="pembelian-diskon"/>
+                                            <output expression="&quot;Pelanggan adalah non member,tidak mendapatkan diskon&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;diskon : &quot;&amp;diskon&amp;ToChar(13)&amp;&#13;&#10;&quot;total pembayaran : &quot;&amp;total" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;inputan tidak valid&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

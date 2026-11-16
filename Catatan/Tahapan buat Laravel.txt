@@ -1,0 +1,16 @@
+Tahapan buat Laravel :
+
+1.
+
+2.
+
+3. Buat Model dan Migration : php artisan make:model Product -m
+
+4. Buat Field di Migration
+
+5. Isi products pada app --> Models --> Products
+
+6. Generated Table dan fieldnya : php artisan migrate
+
+7. cek table pada phpmyadmin
+

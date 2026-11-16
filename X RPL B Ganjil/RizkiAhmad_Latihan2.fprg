@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-26 11:40:50 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMDktMjY7MTE6MzM6NDYgQU07MjI4MA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMDktMjY7MTE6NDA6NTAgQU07MTsyMzgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bilanganRizkiAM" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan BIlangan : &quot;" newline="True"/>
+            <input variable="bilanganRizkiAM"/>
+            <if expression="bilanganRizkiAM&gt;0">
+                <then>
+                    <output expression="&quot;Bilangan positif&quot;" newline="True"/>
+                    <if expression="bilanganRizkiAM%2=0">
+                        <then>
+                            <output expression="&quot;Bilangan Genap&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Bilangan Ganjil&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="bilanganRizkiAM&lt;0">
+                        <then>
+                            <output expression="&quot;bilangan negatif&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="bilanganRizkiAM=0">
+                                <then>
+                                    <output expression="&quot;Bilangan Nol&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Bilangan Invalid&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

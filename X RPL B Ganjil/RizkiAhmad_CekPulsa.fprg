@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-24 09:28:52 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjQ7MDg6Mjc6MDEgQU07MjI3MA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjQ7MDk6Mjg6NTIgQU07MTsyMzg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cekRAM" type="Integer" array="False" size=""/>
+            <declare name="kembaliRAM" type="String" array="False" size=""/>
+            <do expression="kembaliRAM=&quot;Y&quot;||kembaliRAM=&quot;y&quot;">
+                <output expression="&quot;Selamat datang di aplikasi pengecekan pulsa.&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;1. cek pulsa&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;2. cek kuota&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;3. masa aktif&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;pilih (1/2/3)&quot;" newline="True"/>
+                <input variable="cekRAM"/>
+                <if expression="cekRAM==1">
+                    <then>
+                        <output expression="&quot;Anda memilih 1&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;Pulsa anda adalah Rp. 0,-&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="cekRAM==2">
+                            <then>
+                                <output expression="&quot;Anda memilih 2&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;kuota anda 1GB&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="cekRAM==3">
+                                    <then>
+                                        <output expression="&quot;Anda memilih 3&quot;&amp;ToChar(13)&amp;&#13;&#10;&quot;masa aktif anda sampai 28 Oktober 2024&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Inputan yang anda masukan tidak benar, mohon disesuaikan&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <do expression="(kembaliRAM!=&quot;Y&quot;)&amp;&amp;(kembaliRAM!=&quot;y&quot;)&amp;&amp;(kembaliRAM!=&quot;T&quot;)&amp;&amp;(kembaliRAM!=&quot;t&quot;)">
+                    <output expression="&quot;apakah anda akan kembali ke menu utama?(Y/T)&quot;" newline="True"/>
+                    <input variable="kembaliRAM"/>
+                </do>
+            </do>
+            <output expression="&quot;terima kasih sudah menggunakan aplikasi kami&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

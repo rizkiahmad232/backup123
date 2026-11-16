@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-16 09:48:12 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMTY7MDk6MDI6MzkgUE07MjI5MQ=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMTY7MDk6NDg6MTIgUE07MzsyNDAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="segitigaRizkiA, barisRizkiA, segitiga1RizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan baris&quot;" newline="True"/>
+            <input variable="barisRizkiA"/>
+            <for variable="segitigaRizkiA" start="1" end="barisRizkiA" direction="inc" step="1">
+                <for variable="segitiga1RizkiA" start="1" end="segitigaRizkiA" direction="inc" step="1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                </for>
+                <output expression="ToChar(13)" newline="False"/>
+            </for>
+            <for variable="segitigaRizkiA" start="barisRizkiA" end="1" direction="dec" step="1">
+                <for variable="segitiga1RizkiA" start="2" end="segitigaRizkiA" direction="inc" step="1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                </for>
+                <output expression="ToChar(13)" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

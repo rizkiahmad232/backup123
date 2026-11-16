@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-09 09:59:34 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MDk6NTQ6NTIgUE07MjI5NQ=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MDk6NTk6MzQgUE07MTsyNDA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="anakayamRizkiA" type="Integer" array="False" size=""/>
+            <input variable="anakayamRizkiA"/>
+            <for variable="anakayamRizkiA" start="anakayamRizkiA" end="2" direction="dec" step="1">
+                <output expression="&quot;tekotek kotek kotek anak ayam turun &quot;&amp;anakayamRizkiA" newline="True"/>
+                <output expression="&quot;Mati satu tinggal &quot;&amp;anakayamRizkiA-1" newline="True"/>
+            </for>
+            <output expression="&quot;TEkotek kotek kotek, anak ayam turun &quot;&amp;anakayamRizkiA" newline="True"/>
+            <output expression="&quot;Mati satu tinggal induknya&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

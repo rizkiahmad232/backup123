@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form>
+        <h1>BILANGAN PRIMA</h1>
+        Masukan batas atas : <br><br> <input type="number" id="PrimaRizkiA1" placeholder="Batas"> <br><br>
+        <button onclick="kirim()">Cetak Bilangan Prima</button>
+    </form>
+    <script>
+        function kirim() {
+            PrimaRizkiA1 = document.getElementById("PrimaRizkiA1").value
+            var PrimaRizkiA2
+            var PrimaRizkiA3
+            var HasilRizkiA
+
+            document.write("Bilangan prima dari 1 sampai " + PrimaRizkiA1 + "adalah")
+            for (let PrimaRizkiA2 = 1; PrimaRizkiA2 <= PrimaRizkiA1; PrimaRizkiA2++) {
+                HasilRizkiA = 0
+
+                for (let PrimaRizkiA3 = 1; PrimaRizkiA3 <= PrimaRizkiA2; PrimaRizkiA3++) {
+                    if (PrimaRizkiA2 % PrimaRizkiA3==0){
+                        HasilRizkiA = HasilRizkiA+1
+                    }
+                }
+
+                if (HasilRizkiA==2){
+                    document.write(PrimaRizkiA2 + " ")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

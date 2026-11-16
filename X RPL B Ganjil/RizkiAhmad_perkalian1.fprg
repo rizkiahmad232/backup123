@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-23 08:45:46 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MTE6MjQ6MzkgUE07MjI5MA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjM7MDg6NDU6NDYgQU07MzsyMzg4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dikaliRAM, angkaPRAM, angkaHRAM" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukan nilai perkalian&quot;" newline="True"/>
+            <input variable="angkaPRAM"/>
+            <output expression="&quot;Masukan jumlah yang akan dikalikan&quot;" newline="True"/>
+            <input variable="angkaHRAM"/>
+            <for variable="dikaliRAM" start="1" end="angkaHRAM" direction="inc" step="1">
+                <output expression="angkaPRAM&amp;&quot;x&quot;&amp;dikaliRAM&amp; &quot;=&quot;&amp;angkaPRAM*dikaliRAM" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

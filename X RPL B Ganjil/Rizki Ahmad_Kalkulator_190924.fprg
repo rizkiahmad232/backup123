@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-19 11:21:43 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMDktMTk7MTA6Mzk6MDEgQU07MjI3OA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMDktMTk7MTE6MjE6NDMgQU07MjsyMzg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Angka1RizkiA, Angka2RizkiA" type="Integer" array="False" size=""/>
+            <declare name="operasiRizkiA" type="String" array="False" size=""/>
+            <declare name="hitungRizkiA" type="Real" array="False" size=""/>
+            <output expression="&quot;masukkan angka pertama :&quot;" newline="True"/>
+            <input variable="Angka1RizkiA"/>
+            <output expression="&quot;Masukan angka kedua :&quot;" newline="True"/>
+            <input variable="Angka2RizkiA"/>
+            <output expression="&quot;Masukkan operasinya : ,kali,bagi,tambah,kurang&quot;" newline="True"/>
+            <input variable="operasiRizkiA"/>
+            <if expression="operasiRizkiA==&quot;kali&quot;">
+                <then>
+                    <assign variable="hitungRizkiA" expression="Angka1RizkiA*Angka2RizkiA"/>
+                    <output expression="hitungRizkiA" newline="True"/>
+                </then>
+                <else>
+                    <if expression="operasiRizkiA==&quot;bagi&quot;">
+                        <then>
+                            <assign variable="hitungRizkiA" expression="Angka1RizkiA/Angka2RizkiA"/>
+                            <output expression="hitungRizkiA" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="operasiRizkiA==&quot;tambah&quot;">
+                                <then>
+                                    <assign variable="hitungRizkiA" expression="Angka1RizkiA+Angka2RizkiA"/>
+                                    <output expression="hitungRizkiA" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="operasiRizkiA==&quot;kurang&quot;">
+                                        <then>
+                                            <assign variable="hitungRizkiA" expression="Angka1RizkiA-Angka2RizkiA"/>
+                                            <output expression="hitungRizkiA" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Data yang Anda masukan tidak sesuai&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

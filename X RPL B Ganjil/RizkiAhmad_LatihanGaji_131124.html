@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form>
+        Gaji Pokok : <input type="number" id="GpokokRizkiA" placeholder="Gaji Pokok"><br>
+        lama kerja karyawan : <input type="number" id="LkerjaRizkiA" placeholder="Lama Kerja Karyawan"><br>
+        <button onclick="Lanjut()">Lanjut</button>  
+    </form>
+
+    <script>
+        function Lanjut() {
+        GpokokRizkiA= Number (document.getElementById("GpokokRizkiA").value)
+        LkerjaRizkiA=Number (document.getElementById("LkerjaRizkiA").value)
+
+        if (LkerjaRizkiA>=5){
+            BonusRizkiA = GpokokRizkiA*0.2
+        }else if (LkerjaRizkiA<5 && LkerjaRizkiA>=3){
+                BonusRizkiA = GpokokRizkiA*0.1
+        }else if (LkerjaRizkiA<3 && LkerjaRizkiA>=1){
+                BonusRizkiA = GpokokRizkiA*0.05
+        }else if (LkerjaRizkiA<1){
+                BonusRizkiA = 0
+        }else{
+            document.write ("inputan Invalid")
+        }
+        GakhirRizkiA=GpokokRizkiA+BonusRizkiA
+        if (GakhirRizkiA>4500000){
+            pajakRizkiA=GakhirRizkiA*0.05
+        }else{
+            pajakRizkiA=0
+        }
+
+        GSbonus=GakhirRizkiA-pajakRizkiA
+        document.write("gaji pokok : " + GpokokRizkiA + "<br>")
+        document.write("Lama Kerja Karyawan : " + LkerjaRizkiA + "<br>")
+        document.write("Bonus dari Lama Kerja : " + BonusRizkiA + "<br>")
+        document.write("Gaji Akhir : " + GakhirRizkiA + "<br>")
+        document.write("Pajak (setelah Gaji + Bonus : " + pajakRizkiA + "<br>") 
+        document.write("Gaji setelah Pajak : " + GSbonus)
+    }
+    </script>
+</body>
+</html>

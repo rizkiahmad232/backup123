@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-23 09:31:59 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMTY7MDg6NTE6NDUgUE07MjI5MQ=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMjM7MDk6MzE6NTkgQU07MjsyMzg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="barisRizkiA, segitiga1RizkiA, segitigaRizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukan baris&quot;" newline="True"/>
+            <input variable="barisRizkiA"/>
+            <while expression="barisRizkiA&gt;=1">
+                <assign variable="segitigaRizkiA" expression="barisRizkiA"/>
+                <while expression="segitigaRizkiA&gt;=1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                    <assign variable="segitigaRizkiA" expression="segitigaRizkiA-1"/>
+                </while>
+                <assign variable="barisRizkiA" expression="barisRizkiA-1"/>
+                <output expression="ToChar(13)" newline="False"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

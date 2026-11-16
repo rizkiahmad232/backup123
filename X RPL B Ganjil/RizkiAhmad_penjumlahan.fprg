@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-09 11:18:03 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MTE6MDg6MzUgUE07MjI4OA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MTE6MTg6MDMgUE07MjsyMzkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nilai1, nilai2, penjumlahan" type="Integer" array="False" size=""/>
+            <assign variable="penjumlahan" expression="0"/>
+            <input variable="nilai2"/>
+            <for variable="nilai1" start="1" end="nilai2" direction="inc" step="1">
+                <output expression="nilai1" newline="True"/>
+                <assign variable="penjumlahan" expression="penjumlahan+nilai1"/>
+            </for>
+            <output expression="penjumlahan" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

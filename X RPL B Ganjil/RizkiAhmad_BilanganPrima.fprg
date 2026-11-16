@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-16 11:20:18 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMTY7MTA6MDI6MjIgUE07MjI3NQ=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMTY7MTE6MjA6MTggUE07MTsyMzg5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="awalRizkiA, akhirRizkiA, sekarangRizkiA, yRizkiA, cekRizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukan angka awal&quot;" newline="True"/>
+            <input variable="awalRizkiA"/>
+            <output expression="&quot;Masukan angka akhir&quot;" newline="True"/>
+            <input variable="akhirRizkiA"/>
+            <for variable="sekarangRizkiA" start="awalRizkiA" end="akhirRizkiA" direction="inc" step="1">
+                <assign variable="cekRizkiA" expression="0"/>
+                <for variable="yRizkiA" start="1" end="sekarangRizkiA" direction="inc" step="1">
+                    <if expression="sekarangRizkiA%yRizkiA==0">
+                        <then>
+                            <assign variable="cekRizkiA" expression="cekRizkIA+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="cekRizkiA==2">
+                    <then>
+                        <output expression="sekarangRizkiA" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

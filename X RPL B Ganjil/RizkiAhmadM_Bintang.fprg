@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-16 11:58:19 AM"/>
+        <attribute name="created" value="UlBMO1BDXzI4LVJQTF8yOzIwMjQtMTAtMTY7MTA6NDc6NDEgQU07MjI3Ng=="/>
+        <attribute name="edited" value="UlBMO1BDXzI4LVJQTF8yOzIwMjQtMTAtMTY7MTE6NTg6MTkgQU07MTsyMzky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bintangRizkiA, barisRizkiA, bintang1RizkiA" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukkan jumlah baris :&quot;" newline="True"/>
+            <input variable="barisRizkiA"/>
+            <for variable="bintangRizkiA" start="1" end="barisRizkiA" direction="inc" step="1">
+                <for variable="bintang1RizkiA" start="1" end="bintangRizkiA" direction="inc" step="1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<DOCTYPE html>
+    <html>
+        <script>
+            barang1 = "baju"
+            harga1 = 50000
+            jumlah_barang1 = 10
+            barang2 = "rok"
+            harga2 = 60000
+            jumlah_barang2 = 9
+            barang3 = "kemeja"
+            harga3 = 75000
+            jumlah_barang3 = 8
+            barang4 = "celana panjang"
+            harga4 = 80000
+            jumlah_barang4 = 7
+            total1 = harga1*jumlah_barang1
+            total2 = harga2*jumlah_barang2
+            total3 = harga3*jumlah_barang3
+            total4 = harga4*jumlah_barang4
+            Total = total1+total2+total3+total4
+            diskon = Total*20/100
+            pajak = 0.1 * ( Total-diskon)
+            total_keseluruhan = Total - diskon + pajak
+
+            document.write("barang 1 : " + barang1 + "<br>" + "harga 1 : " + harga1 + "<br>" + "jumlah_barang 1 : " + jumlah_barang1 + "<br>" + "total harga 1 : " + harga1*jumlah_barang1 + "<br>")
+            document.write ("<br>")
+            document.write("barang 2 : " + barang2 + "<br>" + "harga 2 : " + harga2 + "<br>" + "jumlah_barang 2 : " + jumlah_barang2 + "<br>" + "total harga 2 : " + harga2*jumlah_barang2 + "<br>")
+            document.write ("<br>")
+            document.write("barang 3 : " + barang3 + "<br>" + "harga 3 : " + harga3 + "<br>" + "jumlah_barang 3 : " + jumlah_barang3 + "<br>" + "total harga 3 : " + harga3*jumlah_barang3 + "<br>")
+            document.write ("<br>")
+            document.write("barang 4 : " + barang4 + "<br>" + "harga 4 : " + harga4 + "<br>" + "jumlah_barang 4 : " + jumlah_barang4 + "<br>" + "total harga 4 : " + harga4*jumlah_barang4 + "<br>")
+            document.write ("<br>")
+            document.write("Total : Rp." + Total + "<br>")
+            document.write("diskon 20% : Rp." + diskon + "<br>")
+            document.write("Pajak 10% : Rp." + pajak + "<br>")
+            document.write("Total Keseluruhan : Rp." + total_keseluruhan )
+        </script>
+    </html>

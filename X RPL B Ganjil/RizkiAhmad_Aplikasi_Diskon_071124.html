@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2</title>
+</head>
+<body>
+    <H1>Toko Buah - Total Harga dan Diskon</H1>
+    <form>
+        Jumlah Apel (Rp 5.000 per buah): <input type="number" id=apelRizkiA><br>
+        Jumlah Pisang (Rp 3.000 per buah): <input type="number" id=pisangRizkiA><br>
+        Jumlah Jeruk (Rp 4.000 per buah): <input Type="number" id=jerukRizkiA><br>
+        <button onclick="hitungtotal() ">Hitung Total</button>
+    </form>
+    <script>
+        function hitungtotal() {
+            apelRizkiA=document.getElementById("apelRizkiA").value
+            pisangRizkiA=document.getElementById("pisangRizkiA").value
+            jerukRizkiA=document.getElementById("jerukRizkiA").value
+            HapelRizkiA=Number(apelRizkiA*5000)
+            HpisangRizkiA=Number(pisangRizkiA*3000)
+            HjerukRizkiA=Number(jerukRizkiA*4000)
+            TotalRizkiA=HapelRizkiA+HpisangRizkiA+HjerukRizkiA
+
+            if (TotalRizkiA>=50000){
+                DiskonRizkiA=TotalRizkiA*0.1
+            } else if (TotalRizkiA>100000)
+                DiskonRizkiA=TotalRizkiA*0.15
+                else
+                DiskonRizkiA=0
+
+            if (TotalRizkiA<=30000){
+                BiayaP=TotalRizkiA+5000
+            } else {
+                BiayaP=0}
+               
+                TotalHRizkiA=TotalRizkiA-DiskonRizkiA
+                document.write("Total harga sebelum Diskon : Rp " + TotalRizkiA + "<br>")
+                document.write("Diskon : Rp " + DiskonRizkiA + "<br>")
+                document.write("total Harga Setelah Diskon : Rp " + TotalHRizkiA + "<br>")
+                document.write("Total Biaya Pengiriman : Rp " + BiayaP + "<br>")
+        }
+
+    </script>
+</body>
+</html>

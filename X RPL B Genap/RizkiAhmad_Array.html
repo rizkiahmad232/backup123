@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Input Nama</h2>
+
+        <!-- Form untuk input jumlah nama -->
+        <div id="step1">
+            <label for="jumlahNama">Masukkan jumlah nama yang ingin diinput:</label><br>
+            <input type="number" id="jumlahNama" min="1" required>
+            <br><br>
+            <button onclick= "generateForm()">Lanjutkan</button>
+        </div>
+
+        <!-- Form untuk input nama-nama -->
+            <div id="step2" class="hidden">
+                <form id="namaForm">
+                <div id="namaInputs"></div>
+                <br>
+                <button type="button" onclick="showResult()">Tampilkan Hasil</button>
+            </form>
+        </div>
+
+        <!-- Hasil input -->
+        <div id="result" class="result hidden">
+            <h3>Hasil Nama yang Diinputkan</h3>
+            <ul id="namaList"></ul>
+            <br>
+            <button onclick="resetForm()">Kembali</button>
+        </div>
+
+        <script>
+            // Fungsi untuk menghasilkan form input nama
+            function generateForm() {
+                const jumlahNama = document.getElementById("jumlahNama").value;
+                const namaInputs = document.getElementById("namaInputs");
+
+                if (jumlahNama < 1) {
+                    alert("Jumlah nama harus lebih dari 0!");
+                    return;
+                }
+
+                // Bersihkan input sebelumnya
+                namaInputs.innerHTML = "";
+
+                // Tambahkan input untuk setiap nama
+                for (let i = 1; i <= jumlahNama; i++) {
+                    const label = document.createElement("label");
+                    label.textContent = `Nama ${i}:`;
+                    const input = document.createElement("input");
+                    input.type = "text";
+                    input.name = `nama$[i]`;
+                    input.required = true;
+                    namaInputs.appendChild(label);
+                    namaInputs.appendChild(input);
+                    namaInputs.appendChild(document.createElement("br"));
+                    namaInputs.appendChild(document.createElement("br"));
+                }
+
+                // Tampilkan langkah 2 dan sembunyikan langka 1
+                document.getElementById("step1").classList.add("hidden");
+                document.getElementById("step2").classList.remove("hidden");
+            }
+            
+            //Fungsi untuk menampilkan hasil input
+            function showResult() {
+                const form = document.getElementById("namaForm");
+                const inputs = form.querySelectorAll("input");
+                const namaList = document.getElementById("namaList");
+
+                // Bersihkan daftar sebelumnya
+                namaList.innerHTML = "";
+
+                // Ambil nilai dari setiap input dan tambahkan ke daftar
+                inputs.forEach((input, index) => {
+                    const li = document.createElement("li");
+                    li.textContent = `Nama ${index + 1}: ${input.value}`;
+                    namaList.appendChild(li);
+                });
+
+                // Tampilkan hasil dan sembunyikan form
+                document.getElementById("step2").classList.add("hidden");
+                document.getElementById("result").classList.remove("hidden");
+            }
+
+            // Fungsi untuk mereset form
+            function resetForm() {
+                // Tampilkan langkah 1 dan sembunyikan hasil
+                document.getElementById("step1").classList.remove("hidden");
+                document.getElementById("result").classList.add("hidden");
+
+                // Reset input jumlah nama
+                document.getElementById("jumlahNama").value = "";
+
+                // Sembunyikan langkah 2
+                document.getElementById("step2").classList.add("hidden");
+            }
+        </script>
+    </body>
+</html>

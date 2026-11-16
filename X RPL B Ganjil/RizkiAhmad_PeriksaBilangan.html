@@ -1,0 +1,36 @@
+
+<DOCTYPE html>
+<body>
+<script>
+    RizkiA1 = Number(window.prompt('Masukan angka'));
+
+    document.write("Angka yang dimasukan : " + RizkiA1 + `<br>`)
+
+
+    if (RizkiA1 % 2 == 0) {
+        document.write("Jenis bilangan : Genap")
+        document.write(`<br>`)
+    } else {
+        document.write("Jenis bilangan : Ganjil")
+        document.write(`<br>`)
+    }
+
+       for (RizkiA2 = RizkiA1; RizkiA2 <= RizkiA1; RizkiA2++) {
+        RizkiAcek = 0;
+           for (RizkiA3 = 1; RizkiA3 <= RizkiA2; RizkiA3++) {
+               if (RizkiA2 % RizkiA3 == 0) {
+                RizkiAcek = RizkiAcek + 1
+               }
+           }
+           if (RizkiAcek %2 == 0 ) {
+               document.write("Jenis Bilangan : Prima")
+               document.write(`<br>`) 
+           } else {
+               document.write("Jenis Bilangan : Non Prima")
+               document.write(`<br>`)
+           }
+        
+       }
+</script>
+</body>
+</html>

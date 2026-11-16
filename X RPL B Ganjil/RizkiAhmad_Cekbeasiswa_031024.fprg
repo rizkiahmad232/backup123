@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 11:40:15 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MTE6Mjg6NDAgQU07MjI2NQ=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MTE6NDA6MTUgQU07MTsyMzY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="RAMnilaiR, RAMekstrakulikuler" type="Integer" array="False" size=""/>
+            <declare name="RAMstatusE" type="String" array="False" size=""/>
+            <output expression="&quot;masukan nilai rata rata&quot;" newline="True"/>
+            <input variable="RAMnilaiR"/>
+            <output expression="&quot;Status ekonomi&quot;" newline="True"/>
+            <input variable="RAMstatusE"/>
+            <output expression="&quot;masukan ekstralulikuler yang kamu ikuti &quot;" newline="True"/>
+            <input variable="RAMekstrakulikuler"/>
+            <if expression="(RAMnilaiR&gt;85)&amp;&amp;(RAMstatusE==&quot;kurang mampu&quot;)||(RAMekstrakulikuler&gt;3)">
+                <then>
+                    <output expression="&quot;Berhak mendapatkan beasiswa&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Tidak berhak mendapatkan beasiswa&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

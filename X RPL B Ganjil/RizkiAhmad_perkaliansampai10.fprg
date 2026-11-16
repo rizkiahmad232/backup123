@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-09 11:39:43 PM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MTE6MjQ6MzkgUE07MjI5MA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDk7MTE6Mzk6NDMgUE07MTsyMzk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dikali, angkaP, angkaH" type="Integer" array="False" size=""/>
+            <input variable="angkaP"/>
+            <for variable="dikali" start="1" end="10" direction="inc" step="1">
+                <output expression="angkaP&amp;&quot;x&quot;&amp;dikali&amp; &quot;=&quot;&amp;angkaP*dikali" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

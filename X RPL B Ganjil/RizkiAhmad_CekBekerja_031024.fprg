@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 11:21:09 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MTE6MTM6MjkgQU07MjI2Ng=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDM7MTE6MjE6MDkgQU07MjsyMzcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="usiaRizkiAM, statusPRizkiAM" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukkan usia anda : &quot;" newline="True"/>
+            <input variable="usiaRizkiAM"/>
+            <output expression="&quot;Silahkan Tulis Nomornya : 1.Bekerja 2.Tidak Bekerja&quot;" newline="True"/>
+            <input variable="statusPRizkiAM"/>
+            <if expression="usiaRizkiAM&gt;18&amp;&amp;statusPRizkiAM==1">
+                <then>
+                    <output expression="&quot;Dewasa dan Bekerja&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Tidak memenuhi kriteria&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

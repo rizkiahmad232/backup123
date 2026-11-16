@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RPL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-02 11:46:11 AM"/>
+        <attribute name="created" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDI7MTE6MjY6NDIgQU07MjI2NA=="/>
+        <attribute name="edited" value="UlBMO1BDXzMxLVJQTF8yOzIwMjQtMTAtMDI7MTE6NDY6MTEgQU07MTsyMzcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="masakerjaRizkiAM, kinerjaRizkiAM, bonusRizkiAM" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan masa kerja karyawan : &quot;" newline="True"/>
+            <input variable="masakerjaRizkiAM"/>
+            <output expression="&quot;masukkan kinerja karyawan : &quot;" newline="True"/>
+            <input variable="kinerjaRizkiAM"/>
+            <if expression="masakerjaRizkiAM&gt;5">
+                <then>
+                    <if expression="kinerjaRizkiAM&gt;85">
+                        <then>
+                            <assign variable="bonusRizkiAM" expression="10000000"/>
+                        </then>
+                        <else>
+                            <if expression="kinerjaRizkiAM&gt;=70&amp;&amp;kinerjaRizkiAM&lt;=85">
+                                <then>
+                                    <assign variable="bonusRizkiAM" expression="7500000"/>
+                                </then>
+                                <else>
+                                    <if expression="kinerjaRizkiAM&gt;0">
+                                        <then>
+                                            <assign variable="bonusRizkiAM" expression="5000000"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;inputan invalid&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="masakerjaRizkiAM&gt;=3&amp;&amp;masakerjaRizkiAM&lt;=5">
+                        <then>
+                            <if expression="kinerjaRizkiAM&gt;85">
+                                <then>
+                                    <assign variable="bonusRizkiAM" expression="7500000"/>
+                                </then>
+                                <else>
+                                    <if expression="kinerjaRizkiAM&gt;=70&amp;&amp;kinerjaRizkiAM&lt;=85">
+                                        <then>
+                                            <assign variable="bonusRizkiAM" expression="5000000"/>
+                                        </then>
+                                        <else>
+                                            <if expression="kinerjaRizkiAM&gt;0">
+                                                <then>
+                                                    <assign variable="bonusRizkiAM" expression="2500000"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;inputan Invalid&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="masakerjaRizkiAM&gt;0">
+                                <then>
+                                    <assign variable="bonusRizkiAM" expression="1000000"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Inputan Invalid&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="bonusRizkiAM" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
